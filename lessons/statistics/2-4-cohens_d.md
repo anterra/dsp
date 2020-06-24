@@ -61,5 +61,5 @@ diff
 
 Observation of the total population of live births data this way helps to contextualize the computed value of Cohen's *d*. It is clear that a value of 0.089, or a difference of just 0.125 lbs (even though it may sound significant when referred to as "2 oz"), when compared to variability with the groups of 1.407 lb, is not statistically significant. 
 
-
+This is a similar result to that for pregnancy lengths found in the textbook; there does exist a small difference in the average values for first and non-first pregnancies, but Cohen's *d* is very small, indicating that the difference seen is insignificant when compared to the how widely spread the distribution of values, reducing the difference practically to noise which indeed would probably go unnoticed if not looking at an extremely large dataset. 
 
