@@ -57,9 +57,9 @@ The difference in these means is:
 diff
 >>> -0.12476118453549034
 ```
-0.125 lbs, or 2 oz. As a percentage of total average birth weight, ```live.totalwgt_lb.mean()``` = 7.266 lb, this difference equates to only 1.72%. The pooled standard deviation for average weights, 1.407 lb, indicates that the birth weight distribution is fairly decentralized, and deviations in birthweight of up to nearly 1.5 lbs are to be expected. As such, a difference of 0.125 pounds between first and other births falls well within that standard deviation. 
+0.125 lbs, or 2 oz. As a percentage of total average birth weight, ```live.totalwgt_lb.mean()``` = 7.266 lb, this difference equates to only 1.72%. The pooled standard deviation for average weights, 1.407 lb, or the standard dev of total average birth weights, ```live.totalwgt_lb.std()``` = 1.408lb, indicates that the birth weight distribution is fairly decentralized, and deviations in birthweight of up to nearly 1.5 lbs are to be expected. As such, a difference of 0.125 pounds between first and other births falls well within that standard deviation and is not noteworthy. 
 
-Observation of the total population of live births data this way helps to contextualize the computed value of Cohen's *d*. It is clear that a value of 0.089, or a difference of just 0.125 lbs (even though it may sound significant when referred to as "2 oz"), when compared to variability with the groups of 1.407 lb, is not statistically significant. 
+Observation of the total population of live births data this way helps to contextualize the computed value of Cohen's *d*. It is clear that a value of 0.089, or a difference of 0.125 lbs (even though it may sound significant when referred to as "2 oz"), when compared to the high variability within the groups of 1.407 lb, is not practically significant. 
 
 This is a similar result to that for pregnancy lengths found in the textbook; there does exist a small difference in the average values for first and non-first pregnancies, but Cohen's *d* is very small, indicating that the difference seen is insignificant when compared to the how widely spread the distribution of values, reducing the difference practically to noise which indeed would probably go unnoticed if not looking at an extremely large dataset. 
 
