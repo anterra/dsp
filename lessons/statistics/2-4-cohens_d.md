@@ -57,8 +57,9 @@ The difference in these means is:
 diff
 >>> -0.12476118453549034
 ```
-0.125 lbs, or 2 oz. As a percentage of total average birth weight, ```live.totalwgt_lb.mean()``` = 7.266 lb, this difference equates to 1.72%. The standard deviation for total average weights, ```live.totalwgt_lb.std()``` = 1.408 lb, indicates that the birth weight distribution is fairly decentralized, and deviations in birthweight of up to nearly 1.5 lbs are to be expected. As such, a difference of 0.125 pounds between first and other births falls well within that standard deviation, and is hence not statistically significant. 
+0.125 lbs, or 2 oz. As a percentage of total average birth weight, ```live.totalwgt_lb.mean()``` = 7.266 lb, this difference equates to only 1.72%. The pooled standard deviation for average weights, 1.407 lb, indicates that the birth weight distribution is fairly decentralized, and deviations in birthweight of up to nearly 1.5 lbs are to be expected. As such, a difference of 0.125 pounds between first and other births falls well within that standard deviation. 
 
-Observation of the total population of live births data this way helps to contextualize the computed value of Cohen's *d*. It is clear that a value of 0.089 is not a statistically significant difference in standard deviations 
+Observation of the total population of live births data this way helps to contextualize the computed value of Cohen's *d*. It is clear that a value of 0.089, or a difference of just 0.125 lbs (even though it may sound significant when referred to as "2 oz"), when compared to variability with the groups of 1.407 lb, is not statistically significant. 
+
 
 
