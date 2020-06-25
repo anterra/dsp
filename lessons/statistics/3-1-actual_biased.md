@@ -19,9 +19,9 @@ kids
 >>> Pmf({0: 0.466178202276593, 1: 0.21405207379301322, 2: 0.19625801386889966, 3: 0.08713855815779145, 
 4: 0.025644380478869556, 5: 0.01072877142483318}, 'actual')
 ```
-The "kids" pmf was given the label "actual", because it represents the actual probabilities of having a given number of kids in a household for this data. 
+The "kids" pmf was given the label "actual", because it represents the actual probabilities of having a given number of kids in a household for this data, as reported by adult respondents.  
 
-Next, I manipulated the data to reflect the responses to 'how many kids are in the household' as if answered by the kids themselves, which constitutes a biased dataset. To do this, I copied the kids pmf, then multiplied each response by itself:
+Next, I manipulated the data to reflect the responses to 'how many kids are in the household' as if answered by the kids themselves, which constitutes a biased dataset. To do this, I copied the kids pmf, then multiplied each response in the pmf by itself, and finally renormalized the data to reflect percentages once again: 
 
 ```
 def CreateBias(pmf, label):
@@ -48,9 +48,15 @@ thinkplot.PrePlot(2)
 thinkplot.Pmfs([kids, kids_biased])
 thinkplot.Config(xlabel="Number of Kids in Household", ylabel="PMF")
 ```
-![graph]
+![pmf plot](https://github.com/anterra/ThinkStats2/blob/master/ex3.1_pmfs.png?raw=true)
 
-As seen in both the plot and the output values for kids vs. kids_biased, 
+As seen in both the plot and the pmf values, the biased data has a higher percentage of respondents reporting larger numbers of kids in their families, and a smaller number reporting fewer kids. This follows the explanation above of why this phenomenon would take place. Notably, the number of respondents reporting 0 kids in their family has been reduced to 0 in the biased dataset, even though it was the most likely answer among adult respondents in the actual data. This is of course becuase if there are zero kids in a family, there is no kid to answer the survey and respond with '0' if only surveying kids. 
+
+A comparison of the mean values: 
 ```
 kids.Mean(), kids_biased.Mean()
+>>> (1.024205155043831, 2.403679100664282)
 ```
+further confirms that the bias right-shifts the data toward greater values. The mean reported number of kids in households increases by 235% when polling kids instead of adults -- or, more generally, when polling the subject of the study themselves rather than an outside source reporting on the subject. 
+
+This rather extreme example (where the value with the highest actual probability (0 kids) gets reduced to zero percent observed probabilty) demonstrates the importance of considering where data is coming from. Particularly in the case of a study, its essential to realize what the sample population surveyed represents, how likely the respondents are to be in your study and represent certain characterists, and what other groups may be absent from your study yielding unreported data by omission. The fairly obvious example here is that families with 0 kids don't get represented by the data when asking only kids -- but more subtle versions of this affect certainly influence data of all types. Thus, if collecting data on group size directly from individual study subjects as reporting on the their own group, one must 'unbias' the data by dividing each reported value (value = size of respondent's group) by itself, to accomodate for the fact that there will be more respondents from larger groups in the sample. 
