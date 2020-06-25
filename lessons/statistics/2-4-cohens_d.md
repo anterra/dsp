@@ -2,7 +2,7 @@
 
 ## Exercise 2.4
 
-"Using the variable totalwgt_lb, investigate whether first babies are lighter or heavier than others. Compute Cohen's d to quantify the difference between the groups. How does it compare to the difference in pregnancy length?"
+>"Using the variable totalwgt_lb, investigate whether first babies are lighter or heavier than others. Compute Cohen's d to quantify the difference between the groups. How does it compare to the difference in pregnancy length?"
 
 My approach to this problem, in order to gain more practice, was to start from scratch with selecting the data I wanted to work with, and then to calculate Cohen's *d* myself based on its mathematical definition, rather than by using the author's pre-defined python method. 
 
