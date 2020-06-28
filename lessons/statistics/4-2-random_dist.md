@@ -13,7 +13,7 @@ Is the distribution uniform?
 The numpy built-in function random.random([size]) generates a random float in the half-open interval of [0.0, 1.0).
 It, like all algorithms used to generate "random" numbers, is considered psuedo-random. This has to do with the defition of 'random' -- random does not mean a different number every time, but rather means a number that cannot be predicted logically. Any algorithm-generated number can be predicted since algorithms are deterministic, and hence it is not truly random.
 
-To investigate the randomness of the np.random.random function, as prompted, I generated an array of 1000 'random' numbers as follows:  
+This doesn't, however, mean it can't do a good job of generating a uniform distribution of random numbers and i.e. selecting them effectively "randomly". To investigate the randomness of the np.random.random function, as prompted, I generated an array of 1000 "random" numbers as follows:  
 
 ```
 import numpy as np
