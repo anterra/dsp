@@ -11,7 +11,7 @@ Generate 1000 numbers from random.random and plot their PMF and CDF.
 Is the distribution uniform?
 
 The numpy built-in function random.random([size]) generates a random float in the half-open interval of [0.0, 1.0).
-It, like all algorithms used to generate "random" numbers, is considered psuedo-random. This has to do with the defition of 'random' -- random does not mean a different number every time, but rather means a number that cannot be predicted logically. Any algorithm-generated number can be predicted since it is predetermined, and hence it is not truly random.
+It, like all algorithms used to generate "random" numbers, is considered psuedo-random. This has to do with the defition of 'random' -- random does not mean a different number every time, but rather means a number that cannot be predicted logically. Any algorithm-generated number can be predicted since algorithms are deterministic, and hence it is not truly random.
 
 To investigate the randomness of the np.random.random function, as prompted, I generated an array of 1000 'random' numbers as follows:  
 
@@ -50,6 +50,6 @@ Here one observes a much more uniform distribution of numbers, and here also the
 
 ![cdf_10000](https://github.com/anterra/ThinkStats2/blob/master/cdf_4.2_10000.png)
 
-Indeed one sees a virtually perfect straight line. This seems to indicate to me that with enough repeated trials, the np.random.random method does yield a uniform distribution of numbers. As in any event in real-life, only in large enough samples do outcomes even out to their probablistic outcomes. 
+Indeed one sees a virtually perfect straight line. This seems to indicate to me that with enough repeated trials, the np.random.random method does yield a uniform distribution of numbers, and it was only the relatively small selection of numbers before that demonstrated percieved non-uniformity. It at least seems sufficient to reject the null hypothesis that the np.random.random method favors some numbers and avoids certain others as the first PMF of 1000 numbers may look like. As in any event in real-life, only in large enough samples do outcomes even out to their probablistic outcomes. 
 
-Still, it should be stressed that this method is still an algorithm and hence producing only pseudo-random numbers as described above. 
+Still, it should be stressed that this method is still an algorithm, and hence produces only pseudo-random numbers as described above. 
