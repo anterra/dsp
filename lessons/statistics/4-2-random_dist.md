@@ -40,7 +40,7 @@ numbers = np.random.random(10000)
 ```
 ![cdf_1000](https://github.com/anterra/ThinkStats2/blob/master/cdf_4.2_1000.png)
 
-The CDF above can be seen to be pretty close to uniform, with slight deviations from linear. So, why the gaps in the pmf and the slight CDF variance? My theory was that the percieved non-uniformity was due not to a lack of randomness on the part of the random nubmer generating method, but simply due to a small sample size. It is not a lack of equal likelihood that some numbers would be chosen and not others, but only that within 1000 selections of numbers, some happened to get chosen and some did not, and that with a large enough sample size, one would see uniformity. 
+The CDF above can be seen to be pretty close to uniform, with slight deviations from linear. So, why the gaps in the PMF and the slight CDF variance? My theory was that the percieved non-uniformity was due not to a lack of randomness on the part of the random number generating method, but simply due to a small sample size. It is not a lack of equal likelihood that some numbers would be chosen and not others, but only that within 1000 selections of numbers, some happened to get chosen and some did not, and that with a large enough sample size, one would see uniformity. 
 
 To test this hypothesis, I ran all of the above code again but with a generated np.random.random array size of 10000. I then decreased the PMF line width to 0.05 to once again avoid overlap so meaningful results could be seen. I ended up with the following plot: 
 
