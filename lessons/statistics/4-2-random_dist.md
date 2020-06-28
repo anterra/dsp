@@ -52,4 +52,4 @@ Here one observes a much more uniform distribution of numbers, and here also the
 
 Indeed one sees a virtually perfect straight line. This seems to indicate to me that with enough repeated trials, the np.random.random method does yield a uniform distribution of numbers, and it was only the relatively small selection of numbers before that demonstrated percieved non-uniformity. It at least seems sufficient to reject the null hypothesis that the np.random.random method favors some numbers and avoids certain others as the first PMF of 1000 numbers may look like. As in any event in real-life, only in large enough samples do outcomes even out to their probablistic outcomes. 
 
-Still, it should be stressed that this method is still an algorithm, and hence produces only pseudo-random numbers as described above. 
+Still, it should be stressed that this method is still an algorithm, and hence produces only pseudo-random numbers as described above. In practical applications, this demonstrates that it nonetheless does a good job of generating random numbers.
