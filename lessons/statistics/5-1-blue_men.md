@@ -15,7 +15,7 @@ mu = 178
 sigma = 7.7
 dist = scipy.stats.norm(loc=mu, scale=sigma)
 ```
-The parameters included in the function were loc, which defines where you want the distribution centered, here specified at the mean, and scale which sets the standard deviation. 
+The parameters included in the function were loc, which defines where you want the distribution centered, here specified at the median, and scale which sets the standard deviation. 
 
 A ```scipy.stats.norm``` object has a ```.cdf``` function available. A CDF, provided a value, will return that value's percentile rank -- or, the fraction of values within the distribution that are less than or equal to the input value. For example, if given a value of mu, the median, a CDF returns 0.5 -- since 50% of the values will fall below the median (this is just one definition of median, but is convention for CDF). 
 
